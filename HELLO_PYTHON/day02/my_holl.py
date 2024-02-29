@@ -1,7 +1,7 @@
 from random import random
-com = "";
-my = "";
-result = "";
+com = ""
+my = ""
+result = ""
 
 my = input("홀,짝을 입력하시오")
 
