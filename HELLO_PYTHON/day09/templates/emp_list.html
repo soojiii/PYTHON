@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="http://127.0.0.1:5000/add" method="post">
+EMP_LIST HTML
+<table border="1">
+	<tr>
+		<th>사번</th>
+		<th>이름</th>
+		<th>성별</th>
+		<th>주소</th>
+	</tr>
+	{% for e in list %}
+	<tr>
+		<td>{{e.e_id}}</td>
+		<td>{{e.e_name}}</td>
+		<td>{{e.gen}}</td>
+		<td>{{e.addr}}</td>
+	</tr>
+	{% endfor %}
+</table>
+<input type="submit" name="inputlist" value="추가" />
+</form>
+</body>
+</html>
