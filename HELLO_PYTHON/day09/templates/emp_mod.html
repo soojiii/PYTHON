@@ -4,34 +4,34 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-function fn_add_act(){
+function fn_mod_act(){
 	document.frm.submit();
 }
 </script>
 </head>
 <body>
-EMP_ADD HTML
-<form action="emp_add_act" name="frm" method="post">
+MEP_MOD HTML
+<form action="emp_mod_act" name="frm" method="post">
 	<table border="1">
 		<tr>
 			<th>사번</th>
-			<td><input type="text" name="e_id" /></td>
+			<td><input type="text" name="e_id" value="{{vo.e_id}}" /></td>
 		</tr>
 		<tr>
 			<th>이름</th>
-			<td><input type="text" name="e_name" /></td>
+			<td><input type="text" name="e_name" value="{{vo.e_name}}" /></td>
 		</tr>
 		<tr>
 			<th>성별</th>
-			<td><input type="text" name="gen" /></td>
+			<td><input type="text" name="gen" value="{{vo.gen}}" /></td>
 		</tr>
 		<tr>
 			<th>주소</th>
-			<td><input type="text" name="addr" /></td>
+			<td><input type="text" name="addr" value="{{vo.addr}}" /></td>
 		</tr>
 		<tr>
 			<td colspan="2">
-			<input type="button" value="저장" onclick="fn_add_act()" />
+			<input type="button" value="저장" onclick="fn_mod_act()" />
 			</td>
 		</tr>
 	</table>

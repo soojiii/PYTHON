@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function myclick(){
+	var obj = document.getElementsByClassName("mycpan");
+	
+	var arr = [];
+	var ran = 0;
+	var a = "";
+	
+	for(var i=0; i<45; i++){
+		arr[i]=i+1;
+	}
+	
+	for(var i=0; i<1000; i++){
+		ran = parseInt(Math.random()*45);
+		a = arr[0]
+		arr[0]=arr[ran]
+		arr[ran]=a
+	}
+	
+	obj[0].innerHTML = arr[0];
+	obj[1].innerHTML = arr[1];
+	obj[2].innerHTML = arr[2];
+	obj[3].innerHTML = arr[3];
+	obj[4].innerHTML = arr[4];
+	obj[5].innerHTML = arr[5];
+	
+}
+</script>
+</head>
+<body>
+JS09<br>
+<table border="1">
+	<tr>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<input type="button" value="로또출력하기" onclick="myclick()">
+		</td>
+	</tr>
+	
+</table>
+</body>
+</html>

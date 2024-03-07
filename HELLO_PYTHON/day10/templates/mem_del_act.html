@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var cnt = "{{cnt}}"
+if(cnt=="1"){
+	alert("삭제완료!");
+	location.href = "mem_list";
+}else{
+	alert("삭제불가!");
+	location.href = "mem_detail";
+	histrory.back();
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

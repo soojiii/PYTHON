@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.it{
+	width : 40px;
+}
+</style>
+
+</head>
+<body>
+JS03<br>
+<input type="text" class="it">
+*
+<input type="text" class="it">
+<input type="button" id='myclick' value="=">
+<input type="text" class="it">
+<script type="text/javascript">
+
+	let btn = document.getElementById('myclick')
+
+	btn.addEventListener('click',function(){
+		var obj = document.getElementsByClassName("it");
+		var a = parseInt(obj[0].value);
+		var aa = parseInt(obj[1].value);
+		
+		var aaa = a*aa;
+		
+		obj[2].value = aaa;
+	})
+	
+</script>
+</body>
+</html>
