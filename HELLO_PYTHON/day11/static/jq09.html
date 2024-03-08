@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="jquery-3.7.1.js"></script>
+<script type="text/javascript">
+function myclick(){
+	var arr = [];
+	for(var i=0; i<45; i++){
+		arr[i]=i+1;
+	}
+	
+	for(var i=0; i<1000; i++){
+		var ran = parseInt(Math.random()*45);
+		var a = arr[0]
+		arr[0]=arr[ran]
+		arr[ran]=a;
+	}
+	
+	$(".mycpan").eq(0).text(arr[0]);
+	$(".mycpan").eq(1).text(arr[1]);
+	$(".mycpan").eq(2).text(arr[2]);
+	$(".mycpan").eq(3).text(arr[3]);
+	$(".mycpan").eq(4).text(arr[4]);
+	$(".mycpan").eq(5).text(arr[5]);
+	
+}
+$(document).ready(function(){
+	$("#btn").bind("click", function(event) {
+		myclick();
+	});
+});
+
+</script>
+</head>
+<body>
+JQ09<br>
+<table border="1">
+	<tr>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+		<td><span class="mycpan">__</span></td>
+	</tr>
+	<tr>
+		<td colspan="6">
+			<input type="button" value="로또출력하기" id="btn">
+		</td>
+	</tr>
+	
+</table>
+</body>
+</html>
